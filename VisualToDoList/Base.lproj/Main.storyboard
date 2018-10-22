@@ -35,23 +35,28 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T8n-cE-qR5">
                                         <rect key="frame" x="0.0" y="70.5" width="37" height="30"/>
                                         <state key="normal" title="Done"/>
+                                        <connections>
+                                            <action selector="Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fHV-gk-3do"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="ArX-7G-1Sm" firstAttribute="top" secondItem="bj9-Xw-4ga" secondAttribute="bottom" constant="20" id="PI9-Po-zcG"/>
-                                    <constraint firstItem="ArX-7G-1Sm" firstAttribute="leading" secondItem="CPi-Pa-KoZ" secondAttribute="leading" id="bdo-5S-4d4"/>
-                                    <constraint firstAttribute="trailing" secondItem="ArX-7G-1Sm" secondAttribute="trailing" id="jlw-4j-Pt0"/>
+                                    <constraint firstAttribute="trailing" secondItem="ArX-7G-1Sm" secondAttribute="trailing" id="X0K-CT-3aH"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CPi-Pa-KoZ" secondAttribute="trailing" id="IIh-qd-Pez"/>
-                            <constraint firstItem="CPi-Pa-KoZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="fow-fu-hqN"/>
-                            <constraint firstItem="CPi-Pa-KoZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ydu-k1-WL7"/>
+                            <constraint firstAttribute="trailing" secondItem="CPi-Pa-KoZ" secondAttribute="trailing" id="Vyb-cY-Fc6"/>
+                            <constraint firstItem="CPi-Pa-KoZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YGu-cx-dgp"/>
+                            <constraint firstItem="CPi-Pa-KoZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="bdT-gg-L1s"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="ArX-7G-1Sm" id="dc2-yk-F4Q"/>
+                        <outlet property="toDoLabel" destination="bj9-Xw-4ga" id="5VO-KU-bOt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
