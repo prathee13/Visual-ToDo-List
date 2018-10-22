@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     //MARK: Properties
     
@@ -16,19 +16,30 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var toDoLabel: UILabel!
     
-    //MARK: Actions
-    
-    
-    
-    @IBAction func Button(_ sender: UIButton) {
-        toDoLabel.text = "Default Text"
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        //Handle the text field's user input through the delegate callacks.
+        nameTextField.delegate = self
     }
-
-
+    
+    //MARK: UITextFieldDelegate
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        //Hide The Keyboard
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        toDoLabel.text = textField.text
+    }
+    
+    //MARK: Actions
+    
+    @IBAction func Button(_ sender: UIButton) {
+        toDoLabel.text = "Added!"
+    }
+ 
 }
 
