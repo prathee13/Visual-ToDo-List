@@ -27,6 +27,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var priority: UIPickerView!
+   
+  //  @IBOutlet weak var label: UILabel!
     
     let picker = UIImagePickerController()
     
@@ -38,6 +40,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         //Handle the text field's user input through the delegate callacks.
         nameTextField.delegate = self
         
+      //getCurrentDateNTime()
+        
         self.priority.delegate = self
         self.priority.dataSource = self
         
@@ -45,6 +49,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
        
         
         pickerData = ["High", "Medium", "Low"]
+        
+       
         }
     
     //MARK: UITextFieldDelegate
@@ -92,7 +98,17 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         alertVC.addAction(okAction)
         present(alertVC, animated: true, completion: nil)
     }
-        
+    
+    
+    
+   /*  func getCurrentDateNTime(){
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        formatter.timeStyle = .medium
+        let str = formatter.string(from: Date())
+        label.text = str
+    } */
+    
     //MARK: - Delegates
     //What to do when the picker returns with a photo
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {

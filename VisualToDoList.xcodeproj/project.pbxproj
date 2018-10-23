@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		978582E0217EBE32000AC800 /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978582DF217EBE32000AC800 /* Tasks.swift */; };
 		97CAA8BB217A3A41009D7B7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CAA8BA217A3A41009D7B7D /* AppDelegate.swift */; };
 		97CAA8BD217A3A41009D7B7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CAA8BC217A3A41009D7B7D /* ViewController.swift */; };
 		97CAA8C0217A3A41009D7B7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97CAA8BE217A3A41009D7B7D /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		978582DF217EBE32000AC800 /* Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
 		97CAA8B7217A3A41009D7B7D /* VisualToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisualToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97CAA8BA217A3A41009D7B7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97CAA8BC217A3A41009D7B7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			children = (
 				97CAA8BA217A3A41009D7B7D /* AppDelegate.swift */,
 				97CAA8BC217A3A41009D7B7D /* ViewController.swift */,
+				978582DF217EBE32000AC800 /* Tasks.swift */,
 				97CAA8BE217A3A41009D7B7D /* Main.storyboard */,
 				97CAA8C1217A3A4E009D7B7D /* Assets.xcassets */,
 				97CAA8C3217A3A4E009D7B7D /* LaunchScreen.storyboard */,
@@ -198,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97CAA8BD217A3A41009D7B7D /* ViewController.swift in Sources */,
+				978582E0217EBE32000AC800 /* Tasks.swift in Sources */,
 				97CAA8BB217A3A41009D7B7D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
