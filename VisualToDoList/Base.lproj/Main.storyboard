@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CPi-Pa-KoZ">
-                                <rect key="frame" x="0.0" y="40" width="375" height="430.5"/>
+                                <rect key="frame" x="0.0" y="40" width="375" height="310.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To-Do" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bj9-Xw-4ga">
                                         <rect key="frame" x="0.0" y="0.0" width="48" height="20.5"/>
@@ -40,11 +40,24 @@
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="dEq-Sm-jUl">
-                                        <rect key="frame" x="0.0" y="110.5" width="320" height="320"/>
+                                        <rect key="frame" x="0.0" y="110.5" width="120" height="120"/>
+                                        <gestureRecognizers/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="dEq-Sm-jUl" secondAttribute="height" multiplier="1:1" id="kKA-In-Yy6"/>
+                                            <constraint firstAttribute="width" constant="120" id="o0q-VG-W0R"/>
+                                            <constraint firstAttribute="height" constant="120" id="qfN-6f-iFG"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cbr-iW-a0Q">
+                                        <rect key="frame" x="0.0" y="240.5" width="96" height="30"/>
+                                        <state key="normal" title="Take a picture"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XlV-Ti-d5K">
+                                        <rect key="frame" x="0.0" y="280.5" width="141" height="30"/>
+                                        <state key="normal" title="Choose from Gallery"/>
+                                        <connections>
+                                            <action selector="gallery:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9TW-mM-4GF"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="ArX-7G-1Sm" secondAttribute="trailing" id="X0K-CT-3aH"/>
@@ -61,6 +74,7 @@
                     </view>
                     <connections>
                         <outlet property="nameTextField" destination="ArX-7G-1Sm" id="dc2-yk-F4Q"/>
+                        <outlet property="photoImageView" destination="dEq-Sm-jUl" id="J0t-5z-0l5"/>
                         <outlet property="toDoLabel" destination="bj9-Xw-4ga" id="5VO-KU-bOt"/>
                     </connections>
                 </viewController>
