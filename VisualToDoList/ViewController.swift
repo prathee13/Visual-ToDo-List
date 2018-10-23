@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
 
     //MARK: Properties
     
@@ -18,16 +18,30 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     
     @IBOutlet weak var photoImageView: UIImageView!
     
+    @IBOutlet weak var noteLabel: UILabel!
+    
+    @IBOutlet weak var dueDateTimeLabel: UILabel!
+    
+    @IBOutlet weak var priorityLabel: UILabel!
+    
+    
+    @IBOutlet weak var priority: UIPickerView!
+    
     let picker = UIImagePickerController()
     
-    
+    var pickerData: [String] = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //Handle the text field's user input through the delegate callacks.
         nameTextField.delegate = self
-    }
+        
+        self.priority.delegate = self
+        self.priority.dataSource = self
+        
+        pickerData = ["High", "Medium", "Low"]
+        }
     
     //MARK: UITextFieldDelegate
     
@@ -94,6 +108,31 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
+    
+    
+    @IBAction func setDateTime(_ sender: Any, forEvent event: UIEvent) {
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    // Number of columns of data
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+    return 1
+    }
+    
+    // The number of rows of data
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    return pickerData.count
+    }
+    
+    // The data to return fopr the row and component (column) that's being passed in
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    return pickerData[row]
+    }
+    
     
 }
 
