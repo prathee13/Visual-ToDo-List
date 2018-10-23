@@ -16,6 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        UIColor(hue: 0.5222, saturation: 0.52, brightness: 0.97, alpha: 1.0) /* #76e6f7 */
+        UIColor(hue: 188/360, saturation: 52/100, brightness: 97/100, alpha: 1.0) /* #76e6f7 */
+        
+        UIColor(red: 0.4627, green: 0.902, blue: 0.9686, alpha: 1.0) /* #76e6f7 */
+        UIColor(red: 118/255, green: 230/255, blue: 247/255, alpha: 1.0) /* #76e6f7 */
         return true
     }
 

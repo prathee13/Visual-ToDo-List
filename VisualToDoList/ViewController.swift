@@ -24,6 +24,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     
     @IBOutlet weak var priorityLabel: UILabel!
     
+    @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var priority: UIPickerView!
     
@@ -39,6 +40,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         
         self.priority.delegate = self
         self.priority.dataSource = self
+        
+       scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height+100)
+       
         
         pickerData = ["High", "Medium", "Low"]
         }
@@ -88,10 +92,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         alertVC.addAction(okAction)
         present(alertVC, animated: true, completion: nil)
     }
-    @IBAction func Button(_ sender: UIButton) {
-        toDoLabel.text = "Added!"
-    }
-    
+        
     //MARK: - Delegates
     //What to do when the picker returns with a photo
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
